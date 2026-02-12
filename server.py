@@ -33,9 +33,9 @@ load_dotenv()
 
 ANTHROPIC_API_KEY = os.getenv("ANTHROPIC_API_KEY")
 
-# Use Sonnet by default - it's ~5x faster TTFT than Opus
-# Opus: 3-5 sec TTFT, Sonnet: 0.5-1 sec TTFT
-MODEL = os.getenv("MODEL", "claude-sonnet-4-20250514")
+# FULL OPUS - Les's directive: "Full brain is imperative"
+# ElevenLabs settings adjusted: 15s timeout + 3s filler
+MODEL = os.getenv("MODEL", "claude-opus-4-20250514")
 
 # Memory files - loaded from environment
 SOUL_MD = os.getenv("SOUL_MD", "")
