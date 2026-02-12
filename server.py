@@ -33,9 +33,10 @@ load_dotenv()
 
 ANTHROPIC_API_KEY = os.getenv("ANTHROPIC_API_KEY")
 
-# FULL OPUS - Les's directive: "Full brain is imperative"
-# ElevenLabs settings adjusted: 15s timeout + 3s filler
-MODEL = os.getenv("MODEL", "claude-opus-4-20250514")
+# SONNET for voice - fast enough for real-time (1-2s vs Opus 3-5s)
+# Full personality/memory still loaded via env vars
+# Revisit in 2 weeks (2026-02-26) - Les directive
+MODEL = os.getenv("MODEL", "claude-sonnet-4-20250514")
 
 # Memory files - loaded from environment
 SOUL_MD = os.getenv("SOUL_MD", "")
